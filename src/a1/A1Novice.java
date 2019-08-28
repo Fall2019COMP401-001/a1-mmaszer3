@@ -38,10 +38,13 @@ public class A1Novice {
 				cost = quantity * cost;
 				
 				total = total + cost;
-			}			
+			}	
+			
+			
+			String finalCost = String.format("%.2f", total);
 			
 			// Print output
-			System.out.println(first.charAt(0) + ". " + last + ": " + total);
+			System.out.println(first.charAt(0) + ". " + last + ": " + finalCost);
 		}
 		// All input parsed, so close scanner
 		scan.close();
