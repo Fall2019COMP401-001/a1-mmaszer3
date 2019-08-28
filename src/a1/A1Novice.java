@@ -1,16 +1,8 @@
 package a1;
 
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class A1Novice {
-	
-	String first;
-	
-	public A1Novice() {
-		first = null;
-	}
-	
 	
 	public static void main(String[] args) {
 		
@@ -22,34 +14,38 @@ public class A1Novice {
 		int count = scan.nextInt();
 		
 		
-		/*for (int i = 0; i < count; i++) {
+		/* This section loops through each customer and 
+		 * takes in their name and purchases. 
+		 */
+		for (int i = 0; i < count; i++) {
 				
+			String first = scan.next();
+			String last = scan.next();
+		
+			int numItems = scan.nextInt();
+		
+			double total = 0;
 			
-		}
-		*/
+			/* This loops through the purchases of the current customer 
+			 * and takes in the quantity, item name, and price then 
+			 * calculates the total cost of purchase.
+			 */
+			for (int j = 0; i < numItems; j++) {
+				int quantity = scan.nextInt();
+				String food = scan.next();
+				double cost = scan.nextDouble();
+			
+				cost = quantity * cost;
 				
-		String first = scan.next();
-		String last = scan.next();
+				total = total + cost;
+			}
 		
-		int numItems = scan.nextInt();
-		
-		double total = 0;
-		
-		for  (int i = 0; i < numItems; i++) {
-			int quantity = scan.nextInt();
-			String food = scan.next();
-			double cost = scan.nextDouble();
+			// All input parsed, so close scanner
+			scan.close();
 			
-			cost = quantity * cost;
-			
-			total = total + cost;
+			// Print output
+			System.out.println(first.charAt(0) + ". " + last + ": " + total);
 		}
-		
-		// All input parsed, so close scanner
-		scan.close();
-			
-		// Print output
-		System.out.println(first.charAt(0) + ". " + last + ": " + total);
 
 	}
 }
