@@ -30,7 +30,7 @@ public class A1Novice {
 			 * and takes in the quantity, item name, and price then 
 			 * calculates the total cost of purchase.
 			 */
-			for (int j = 0; i < numItems; j++) {
+			for (int j = 0; j < numItems; j++) {
 				int quantity = scan.nextInt();
 				String food = scan.next();
 				double cost = scan.nextDouble();
@@ -38,14 +38,12 @@ public class A1Novice {
 				cost = quantity * cost;
 				
 				total = total + cost;
-			}
-		
-			// All input parsed, so close scanner
-			scan.close();
+			}			
 			
 			// Print output
 			System.out.println(first.charAt(0) + ". " + last + ": " + total);
 		}
-
+		// All input parsed, so close scanner
+		scan.close();
 	}
 }
