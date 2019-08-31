@@ -87,9 +87,9 @@ public class A1Adept {
 		String finalMin = String.format("%.2f", minSpent);
 		String average = String.format("%.2f", totalSpent / numCustomers);
 		
-		System.out.println(bigSpenderFirst + " " + bigSpenderLast + " (" + finalMax +")");
-		System.out.println(littleSpenderFirst + " " + littleSpenderLast + " (" + finalMin +")");
-		System.out.print(average);
+		System.out.println("Biggest:" + bigSpenderFirst + " " + bigSpenderLast + " (" + finalMax +")");
+		System.out.println("Smallest:" +littleSpenderFirst + " " + littleSpenderLast + " (" + finalMin +")");
+		System.out.print("Average:" + average);
 		
 	}
 	
