@@ -89,7 +89,7 @@ public class A1Adept {
 		
 		System.out.println("Biggest: " + bigSpenderFirst + " " + bigSpenderLast + " (" + finalMax +")");
 		System.out.println("Smallest: " +littleSpenderFirst + " " + littleSpenderLast + " (" + finalMin +")");
-		System.out.print("Average: " + average);
+		System.out.println("Average: " + average);
 		
 	}
 	
