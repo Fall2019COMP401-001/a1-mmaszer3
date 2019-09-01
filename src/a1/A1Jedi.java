@@ -36,13 +36,20 @@ public class A1Jedi {
 			String last = scan.next();
 			numItems = scan.nextInt();
 			
+			boolean[] prevBought = new boolean[itemNames.length];
+			
 			for (int j = 0; j < numItems; j++) {
 				int quantity = scan.nextInt();
 				String food = scan.next();
 				
 				int index = find(itemNames,food);
 				itemQuantities[index] = itemQuantities[index] + quantity;
-				numCustWhoBought[index] = numCustWhoBought[index] + 1;
+				
+				// If the customer has not already bought this item, increase the number of customers who have bought it by one.
+				if (prevBought[index] == false) {
+					numCustWhoBought[index] = numCustWhoBought[index] + 1;
+				}
+				prevBought[index] = true;
 			}		
 			
 		}
