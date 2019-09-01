@@ -16,12 +16,20 @@ public class A1Adept {
 		String[] itemNames = new String[numItems];
 		double[] itemPrices = new double[numItems];
 		
+		/* This loop records the food items and prices
+		 * in arrays.
+		 */
 		for (int i = 0; i < numItems; i++) {
 			itemNames[i] = scan.next();
 			itemPrices[i] = scan.nextDouble();			
 		}
 		
 		int numCustomers = scan.nextInt();
+		
+		/* This section stores the information of the first customer 
+		 * to create a basis of comparison for calculating the highest 
+		 * and lowest spender.
+		 */
 		
 		String bigSpenderFirst = scan.next();
 		String bigSpenderLast = scan.next();
@@ -48,7 +56,9 @@ public class A1Adept {
 			
 		}
 		
-		
+		/* This section loops through the other customers, calculating their spending 
+		 * and comparing it to each other to determine the highest and lowest spender.
+		 */
 		for (int i = 1; i < numCustomers; i++) {
 			String first = scan.next();
 			String last = scan.next();
@@ -80,21 +90,22 @@ public class A1Adept {
 			totalSpent = totalSpent + totalOfCust;
 		}
 		
-		
+		// All input parsed, so close scanner
 		scan.close();
 		
 		String finalMax = String.format("%.2f", maxSpent);
 		String finalMin = String.format("%.2f", minSpent);
 		String average = String.format("%.2f", totalSpent / numCustomers);
 		
+		// Print output
 		System.out.println("Biggest: " + bigSpenderFirst + " " + bigSpenderLast + " (" + finalMax +")");
 		System.out.println("Smallest: " +littleSpenderFirst + " " + littleSpenderLast + " (" + finalMin +")");
 		System.out.println("Average: " + average);
 		
 	}
 	
-	public static int find(String[] a, String target)
-	{
+	// This helper method finds the index of a string in an array. Returns -1 if string not found.
+	public static int find(String[] a, String target) {
 		for (int i = 0; i < a.length; i++)
 			if (target.equals(a[i]))
 				return i;
